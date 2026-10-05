@@ -1,0 +1,40 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+- id: agent-security-scan
+  name: Agent Security Scanner
+  description: Scans AI agent source code for hardcoded secrets, unsafe execution, and AST vulnerabilities.
+  entry: agent-security scan
+  language: python
+  types: [python]
+  pass_filenames: false
+  stages: [pre-commit]
+
+- id: agent-security-hitl
+  name: Agent HITL Gating Check
+  description: Verifies all mutating tools in AI agents have Human-In-The-Loop approval gates.
+  entry: agent-security hitl-check
+  language: python
+  types: [python]
+  pass_filenames: false
+  stages: [pre-commit]
+
+- id: agent-security-mcp
+  name: Agent MCP Security Auditor
+  description: Audits Model Context Protocol (MCP) tool configurations for SSRF, unpinned schemas, and token leakage.
+  entry: agent-security mcp-check
+  language: python
+  types: [json]
+  pass_filenames: false
+  stages: [pre-commit]

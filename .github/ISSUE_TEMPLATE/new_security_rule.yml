@@ -1,0 +1,48 @@
+# Copyright 2026 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: 🛡️ Propose New Security Rule / STRIDE Check
+description: Propose a new AST security check, prompt injection pattern, or MCP audit rule.
+labels: ["enhancement", "security-rule"]
+body:
+  - type: markdown
+    attributes:
+      value: We encourage contributors to expand our 8-tier security and cognitive gating rules!
+  - type: dropdown
+    id: category
+    attributes:
+      label: Security Engine Target
+      options:
+        - "Static Code Scanner (Semgrep / Deserialization / Secrets)"
+        - "STRIDE Threat Modeler (AST IDOR, Race Conditions, Loops)"
+        - "Prompt Guard (Injection, Extraction, Crescendo)"
+        - "MCP Security Auditor (SSRF, Schema, Tokens)"
+        - "HITL Validator (Mutating Tools, Approvals)"
+        - "IAM & Delegated Identity (Context Propagation, Workload Identity)"
+        - "PreToolUse Hooks (Destructive Action Blockers)"
+    validations:
+      required: true
+  - type: textarea
+    id: rule_concept
+    attributes:
+      label: Rule Description & Threat Vector
+      description: Explain the vulnerability or attack vector this rule prevents.
+    validations:
+      required: true
+  - type: textarea
+    id: code_example
+    attributes:
+      label: Code Example (Vulnerable vs Remediated)
+      description: Show sample vulnerable agent code and how it should be detected.
+      render: python
