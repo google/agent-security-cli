@@ -53,7 +53,7 @@ flowchart TD
 
 ```bash
 # 1. Clone this repository
-git clone https://github.com/RaviManjunatha/agent-security-cli.git
+git clone https://github.com/google/agent-security-cli.git
 cd agent-security-cli
 
 # 2. Install in editable mode

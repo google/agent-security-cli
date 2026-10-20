@@ -30,7 +30,7 @@ Guidelines](https://opensource.google/conduct/).
 There are many ways to contribute:
 * **Add new security rules & AST checks** (e.g. new STRIDE patterns, MCP vulnerabilities, LangGraph / CrewAI / Semantic Kernel integrations).
 * **Improve prompt guard evaluation datasets** for red-teaming.
-* **Report bugs or suggest features** via [GitHub Issues](https://github.com/RaviManjunatha/agent-security-cli/issues).
+* **Report bugs or suggest features** via [GitHub Issues](https://github.com/google/agent-security-cli/issues).
 * **Improve documentation & architecture guides**.
 
 ---
@@ -39,7 +39,7 @@ There are many ways to contribute:
 
 ### 1. Fork & Clone
 ```bash
-git clone https://github.com/RaviManjunatha/agent-security-cli.git
+git clone https://github.com/google/agent-security-cli.git
 cd agent-security-cli
 ```
 

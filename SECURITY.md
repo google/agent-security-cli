@@ -14,7 +14,7 @@
 If you discover a security vulnerability within **Agent Security CLI**, please do **NOT** open a public issue.
 
 Instead, please report security vulnerabilities responsibly by:
-1. Opening a **Private Security Advisory** on GitHub via [Security -> Advisories -> New draft security advisory](https://github.com/RaviManjunatha/agent-security-cli/security/advisories/new).
+1. Opening a **Private Security Advisory** on GitHub via [Security -> Advisories -> New draft security advisory](https://github.com/google/agent-security-cli/security/advisories/new).
 2. Or contacting the project maintainers directly at `ravi.m.bit@gmail.com`.
 
 ### What to Include in Your Report
